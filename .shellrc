@@ -1,0 +1,17 @@
+# Useful functions
+
+dotfiles() {
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
+}
+
+dis() {
+    dotfiles "$@"
+}
+
+userchmod() {
+    if [ -z "$1" ]; then
+        echo "Folder not specified"
+        return
+    fi
+    sudo chmod -R 644 "$1" && sudo chmod -R u+rwX,go+rX,go-w "$1"
+}
