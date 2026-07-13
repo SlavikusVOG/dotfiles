@@ -1,0 +1,11 @@
+[user]
+    name = SlavikusVOG
+    email = slavaolish@gmail.com
+[core]
+    editor = vim
+[merge]
+    tool = vimdiff
+[rerere]
+    enabled = true
+[init]
+    defaultBranch = main
